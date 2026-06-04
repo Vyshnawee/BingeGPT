@@ -3,14 +3,13 @@ import useMovieTrailer from "../hooks/useMovieTrailer";
 
 const VideoBackground = ({ movieId }) => {
   const trailerVideo = useSelector((store) => store.movies?.trailerVideo);
-  console.log("Trailer Video:", trailerVideo);
   useMovieTrailer(movieId);
   if (!trailerVideo) return null;
 
   return (
     <div className="">
       <iframe
-        className="w-screen aspect-video"
+        className="w-full aspect-video"
         src={`https://www.youtube.com/embed/${trailerVideo}?autoplay=1&mute=1`}
         title="YouTube video player"
         frameBorder="0"
