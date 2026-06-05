@@ -11,8 +11,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwYTg4MDVjNTg4YzVlYmQ5N2M4ZDUxMGUwNWFjZDZhYyIsIm5iZiI6MTc3OTEwOTg4Ni42NDksInN1YiI6IjZhMGIwZmZlMmJjZWFlNWE0ODVmYmQ2YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1MQz_onOjf3hHQ6MAvkvVSjveyRS4PA2iQVd-QaAhUE",
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB,
   },
 };
 
@@ -23,3 +22,5 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "hindi", name: "Hindi" },
   { identifier: "telugu", name: "Telugu" },
 ];
+
+export const GENAI_KEY = process.env.REACT_APP_GENAI_KEY;
